@@ -10,15 +10,6 @@ import static io.qameta.allure.Allure.step;
 
 public class docsinbox extends TestBase {
 
-    @BeforeAll
-    static void setUp() {
-        Configuration.timeout = 10000;
-        Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://docsinbox.ru";
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.headless = true;
-    }
-
     @Test
     @Step("Переход в Тарифы")
     void test() {
