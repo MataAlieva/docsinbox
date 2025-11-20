@@ -16,6 +16,7 @@ public class docsinbox extends TestBase {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://docsinbox.ru";
         Configuration.pageLoadStrategy = "eager";
+        Configuration.headless = true;
     }
 
     @Test
