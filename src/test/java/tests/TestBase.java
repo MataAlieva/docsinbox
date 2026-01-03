@@ -14,12 +14,18 @@ import java.util.Map;
 public class TestBase {
     @BeforeAll
     static void setup() {
+        Configuration.browserSize = "1920x1080";
+        Configuration.pageLoadStrategy = "eager";
+        Configuration.reopenBrowserOnFail = true;
         Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browserVersion", "142.0");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
-        Configuration.remote = System.getProperty("remote");
 
-        // Обязательный блок для Selenoid
-        if (Configuration.remote != null) {
+
+        String remote = System.getProperty("remote", "").trim();
+        if (!remote.isEmpty()) {
+            Configuration.remote = remote;
+
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                     "enableVNC", true,
