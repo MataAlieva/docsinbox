@@ -1,11 +1,9 @@
 {
   "base": {
-    "project": "some project",
-    "environment": "some env",
-    "comment": "some comment",
-    "reportLink": "",
-    "language": "en",
-    "allureFolder": "allure-report",
+    "project": "mvideoeldorado",
+    "language": "ru",
+    "allureFolder": "build/allure-results",
+    "reportLink": "http://your-jenkins-link/job/allure",
     "enableChart": true
   },
   "telegram": {

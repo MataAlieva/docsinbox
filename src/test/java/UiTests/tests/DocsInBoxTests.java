@@ -1,8 +1,8 @@
-package tests;
+package UiTests.tests;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import pages.DocsInBoxPage;
+import UiTests.pages.DocsInBoxPage;
 
 public class DocsInBoxTests extends TestBase {
 

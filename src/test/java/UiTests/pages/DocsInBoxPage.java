@@ -1,4 +1,4 @@
-package pages;
+package UiTests.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
@@ -9,25 +9,21 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class DocsInBoxPage {
 
-    // Локаторы (Элементы)
     private final SelenideElement
             tariffsMenu = $(byText("Тарифы")),
             loginMenuButton = $(byText("Войти")),
             demoMenuButton = $(byText("Записаться на демо")),
             halfYearDiscountButton = $(".tn-atom__button-content"),
 
-    // Форма входа
     loginInput = $("#loginForm_login"),
             passwordInput = $("#loginForm_password"),
             submitLoginButton = $(byText("Войти")),
 
-    // Форма Демо (используем name, так как ID могут меняться)
     demoNameInput = $("[name='name']"),
             demoPhoneInput = $("[name='phone']"),
             demoEmailInput = $("[name='email']"),
             submitDemoButton = $(".t-btn_effects");
 
-    // Действия (Методы)
     @Step("Открыть главную страницу")
     public DocsInBoxPage openPage() {
         open("https://docsinbox.ru/");
