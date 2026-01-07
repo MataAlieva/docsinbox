@@ -1,8 +1,9 @@
 # Проект по UI тестированию для компании  [DocsInBox](https://www.beeline.ru)
 
-<p align="center"><a href="https://docsinbox.ru/"><img src="images/logoDocsInBox.png" align="center" width="500" height="150"  alt="Java"/></a></p>
+<p align="center"><a href="https://docsinbox.ru/"><img src="images/logo1.png" align="center" width="500" height="80"  alt="Java"/></a></p>
+<p align="center"><a href="https://docsinbox.ru/"><img src="images/RestPhoto.png" align="center" width="500" height="150"  alt="Java"/></a></p>
 
-> DocsInBox - продуктовая IT-компания. Наш продукт - облачный B2B SaaS, который упрощает управление ресторанным бизнесом и взаимодействие ресторанов с поставщиками и государственными органами.
+> Документооборот и отчетность в госсистемы для ресторанов в одном окне
 
 #  Содержание:
 
@@ -34,3 +35,12 @@
 * отчёт в <code>Allure Report</code>;
 * отправка результатов при помощи бота в - <code>Telegram</code>;
 * интеграция с - <code>Allure TestOps</code>;
+## Локальный запуск тестов
+Для локального запуска тестов из IDE или из терминала необходимо выполнить следующую команду
+
+## Запуск тестов в [Jenkins]()
+## [Allure отчёт]()
+## Интеграция с [Allure TestOps]()
+## Уведомление в Telegram
+## Видео с примером запуска тестов в Selenoid
+
