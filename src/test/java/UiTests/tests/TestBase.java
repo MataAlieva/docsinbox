@@ -11,19 +11,20 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
+import static com.codeborne.selenide.Selenide.closeWebDriver;
+
 public class TestBase {
     @BeforeAll
     static void setup() {
-        Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = "https://docsinbox.ru";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.reopenBrowserOnFail = true;
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion", "142.0");
+        Configuration.browserVersion = System.getProperty("browserVersion", "122.0");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
 
+        String remote = System.getProperty("remote");
 
-        String remote = System.getProperty("remote", "").trim();
-        if (!remote.isEmpty()) {
+        if (remote != null) {
             Configuration.remote = remote;
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -34,15 +35,19 @@ public class TestBase {
             Configuration.browserCapabilities = capabilities;
         }
     }
+
+    @BeforeEach
+    void addAllureListener() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+    }
+
     @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
-    }
-    @BeforeEach
-    public void addAllureListener() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+
+        closeWebDriver();
     }
 }

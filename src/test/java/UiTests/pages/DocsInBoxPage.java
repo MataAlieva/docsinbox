@@ -19,9 +19,9 @@ public class DocsInBoxPage {
             passwordInput = $("#loginForm_password"),
             submitLoginButton = $(byText("Войти")),
 
-    demoNameInput = $("[name='name']"),
-            demoPhoneInput = $("[name='phone']"),
-            demoEmailInput = $("[name='email']"),
+    demoNameInput = $("#input_6727350581250"),
+            demoPhoneInput = $("#input_6727350581251"),
+            demoEmailInput = $("#input_6727350581252"),
             submitDemoButton = $(".t-btn_effects");
 
     @Step("Открыть главную страницу")

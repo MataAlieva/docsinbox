@@ -1,5 +1,6 @@
-package UiTests.tests;
+package tests;
 
+import UiTests.tests.TestBase;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import UiTests.pages.DocsInBoxPage;
